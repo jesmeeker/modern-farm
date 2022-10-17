@@ -6,10 +6,8 @@ export let harvest = []
 
 export const harvestPlants = (plantsAsAnArray) => {
     for (const plants of plantsAsAnArray) {
-    let plantOutput = plants.output 
-    let halfPlantOutput = plantOutput / 2
         if (plants.type === "Corn") {
-            for (let i=0; i < halfPlantOutput; i++)
+            for (let i=0; i < plants.output / 2; i++)
             harvest.push(plants)
         } else {
             for (let i=0; i < plants.output; i++)
@@ -19,6 +17,4 @@ export const harvestPlants = (plantsAsAnArray) => {
     return harvest
  }
 
-// let harvestedPlants = harvestPlants(plantsArray)
-// console.log(harvestedPlants)
 
